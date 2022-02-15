@@ -5,16 +5,20 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     public float Speed = 1f;
+    private Rigidbody2D rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>(); //comando removido do update
+    }
     
     public void Kick()
     {
-        var rb = GetComponent < Rigidbody2D>();
         rb.velocity = Random.insideUnitCircle * Speed;
     }
 
     private void Update()
     {
-        var rb = GetComponent < Rigidbody2D>();
         rb.velocity = rb.velocity.normalized * Speed;
     }
 }

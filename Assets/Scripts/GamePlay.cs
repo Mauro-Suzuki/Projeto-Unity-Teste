@@ -35,6 +35,12 @@ public class GamePlay : MonoBehaviour
 
     private void Awake()
     {
+        var briks = FindObjectsOfType<BrikController>();
+        foreach(var brik in briks)
+        {
+            brik.onBreak.AddListener(Goal);
+        }//This will add every brik in an array an also add listener in every one for the onBreak event.
+
         if (_instance == null)
         {
             _instance = this;
