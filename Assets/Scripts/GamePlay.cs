@@ -35,11 +35,12 @@ public class GamePlay : MonoBehaviour
 
     private void Awake()
     {
-        var briks = FindObjectsOfType<BrikController>();
-        foreach(var brik in briks)
+        
+        var briks = FindObjectsOfType<BrikController>(); //find all the objects with the brikcontroller script
+        foreach(var brik in briks)//This will add every brik in an array an also add listener in every one for the onBreak event.
         {
             brik.onBreak.AddListener(Goal);
-        }//This will add every brik in an array an also add listener in every one for the onBreak event.
+        }
 
         if (_instance == null)
         {
@@ -57,11 +58,11 @@ public class GamePlay : MonoBehaviour
         pos1.x = 0f;
         Player.transform.position = pos1;
 
-        Ball.transform.position = Vector3.zero;
-        Ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        //Ball.transform.position = Vector3.zero;    //mover para ballcontroller
+        //Ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero; //mover para ballcontroller
 
         ScoreLabel.text = GamePlay.Instance.Score.ToString();
-        LivesLabel.text = GamePlay.Instance.Lives.ToString();
+        LivesLabel.text = GamePlay.Instance.Lives.ToString(); 
 
         StartCoroutine(StartGame());
     }
