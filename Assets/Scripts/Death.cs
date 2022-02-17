@@ -10,7 +10,7 @@ public class Death : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         //GameStateController.Instance.Lives--; moved to lifeController
-        GameStateController.Instance.Reset();
+        //GameStateController.Instance.Reset();
         onDamage.Invoke();
     }
 

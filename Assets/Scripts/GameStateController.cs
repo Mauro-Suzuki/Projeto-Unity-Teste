@@ -5,38 +5,20 @@ using UnityEngine.UI;
 
 public class GameStateController : MonoBehaviour
 {
-
-    private static GameStateController _instance;
-    public static GameStateController Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                var go = new GameObject("GameStateController");
-                _instance = go.AddComponent<GameStateController>();
-            }
-
-            return _instance;
-        }
-    }
-
     public BallController Ball;
-    public PlayerController Player;
-    public Text GetReadyLabel;
-    uint BriksGoal = 4;
-    private bool _gameOver = false;
+    public PlayerController Player;   
     public ScoreController currentScore;
     public LifeController currentLife;
+
+    public Text GetReadyLabel;
+
+    uint BriksGoal = 4;
+
+    private bool _gameOver = false;
+
     private void Awake()
     {
-        if (_instance == null)
-        {
-            _instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-
-        Reset();
+            Reset();
         currentScore.onScore.AddListener(CheckVictory);
         currentLife.onDamageTaken.AddListener(CheckLife);
 
@@ -88,6 +70,30 @@ public class GameStateController : MonoBehaviour
 
 
 //unused/removed code
+/*
+private static GameStateController _instance;
+public static GameStateController Instance
+{
+    get
+    {
+        if (_instance == null)
+        {
+            var go = new GameObject("GameStateController");
+            _instance = go.AddComponent<GameStateController>();
+        }
+
+        return _instance;
+    }
+}
+*/
+
+/*
+if (_instance == null)
+{
+    _instance = this;
+    DontDestroyOnLoad(gameObject);
+}
+*/
 //public Text ScoreLabel; moved to ScoreController
 //public Text LivesLabel;
 
