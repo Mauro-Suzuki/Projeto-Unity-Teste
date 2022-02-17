@@ -6,9 +6,13 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _velocity;
     private Rigidbody2D rbody;
+    public Vector3 orgPos;
+    public Death death;
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
+        orgPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.y);
+        death.onDamage.AddListener(resetPosition);
     }//getcomponent was moved from Update to Start
     void Update()
     {
@@ -24,5 +28,10 @@ public class PlayerController : MonoBehaviour
         {
             rbody.velocity = Vector2.zero;
         }
+    }
+    public void resetPosition()
+    {
+        Debug.Log("reset player");
+        transform.position = orgPos;
     }
 }
