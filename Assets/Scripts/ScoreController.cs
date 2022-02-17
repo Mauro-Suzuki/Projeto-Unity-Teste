@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
     
 [System.Serializable]
-public class MyIntEvent : UnityEvent<uint>
+public class MyUIntEvent : UnityEvent<uint>
 {
 
 }
@@ -13,7 +13,7 @@ public class ScoreController : MonoBehaviour
 {
     public Text ScoreLabel;
     public static uint Score = 0;
-    public MyIntEvent onScore;
+    public MyUIntEvent onScore;
     public void Start()
     {
         var briks = FindObjectsOfType<BrikController>(); //find all the objects with the brikController script
@@ -22,7 +22,7 @@ public class ScoreController : MonoBehaviour
             brik.onBreak.AddListener(AddScore);
         }
         if (onScore == null)
-            onScore = new MyIntEvent();
+            onScore = new MyUIntEvent();
     }
 
     

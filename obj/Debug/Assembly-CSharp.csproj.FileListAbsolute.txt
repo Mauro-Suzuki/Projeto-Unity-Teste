@@ -1,0 +1,2 @@
+C:\Users\mauro\OneDrive\Área de Trabalho\Teste Unity\obj\Debug\Assembly-CSharp.csproj.AssemblyReference.cache
+C:\Users\mauro\OneDrive\Área de Trabalho\Teste Unity\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

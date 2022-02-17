@@ -182,6 +182,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baafc3ea08f5e4311bfb9614f6fe229a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onDamage:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &339264369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -545,6 +548,7 @@ GameObject:
   - component: {fileID: 965706410}
   - component: {fileID: 965706412}
   - component: {fileID: 965706411}
+  - component: {fileID: 965706413}
   m_Layer: 5
   m_Name: Lives
   m_TagString: LIVES
@@ -611,6 +615,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965706409}
   m_CullTransparentMesh: 0
+--- !u!114 &965706413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965706409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aeeb959880d7394c9825ec04b4e3782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LivesLabel: {fileID: 965706411}
+  CurrentLife: 3
+  startingLife: 3
+  damageNumber: 1
+  damageScript: {fileID: 248808958}
 --- !u!1001 &1109724258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -774,6 +795,7 @@ GameObject:
   - component: {fileID: 1224135050}
   - component: {fileID: 1224135052}
   - component: {fileID: 1224135051}
+  - component: {fileID: 1224135053}
   m_Layer: 5
   m_Name: Score
   m_TagString: SCORE
@@ -840,6 +862,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224135049}
   m_CullTransparentMesh: 0
+--- !u!114 &1224135053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224135049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d506df4a26a963d4387c8dfe83f37dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoreLabel: {fileID: 1224135051}
+  onScore:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1236213347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1104,11 +1142,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ball: {fileID: 727422821}
   Player: {fileID: 1296840749}
-  Score: 0
-  LivesLabel: {fileID: 965706411}
   GetReadyLabel: {fileID: 1929710741}
-  Lives: 3
-  currentScore: {fileID: 2013758441}
+  currentScore: {fileID: 1224135053}
+  currentLife: {fileID: 965706413}
 --- !u!50 &2013758440
 Rigidbody2D:
   serializedVersion: 4
@@ -1130,19 +1166,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2013758441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2013758437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d506df4a26a963d4387c8dfe83f37dec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScoreLabel: {fileID: 1224135051}
-  onScore:
-    m_PersistentCalls:
-      m_Calls: []
