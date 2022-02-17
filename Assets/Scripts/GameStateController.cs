@@ -2,9 +2,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class GameStateController : MonoBehaviour
 {
+    public UnityEvent onReset;
+    public UnityEvent onStart;
+
     public BallController Ball;
     public PlayerController Player;   
     public ScoreController currentScore;
@@ -14,19 +18,11 @@ public class GameStateController : MonoBehaviour
 
     uint BriksGoal = 4;
 
-    private bool _gameOver = false;
-
     private void Awake()
     {
-            Reset();
+        Start();
         currentScore.onScore.AddListener(CheckVictory);
         currentLife.onDamageTaken.AddListener(CheckLife);
-
-    }
-    private void Update()
-    {
-        if (_gameOver) return;
-
     }
     public void CheckVictory(uint score)
     {
@@ -40,14 +36,19 @@ public class GameStateController : MonoBehaviour
         if(life <= 0)
         {
             SceneManager.LoadScene("Lose");
-            _gameOver = true;
+        }
+        else
+        {
+            GetReadyLabel.enabled = true;
+            StartCoroutine(StartGame());
         }
     }
 
-    public void Reset()
+    public void Start()
     {
         GetReadyLabel.enabled = true;
         StartCoroutine(StartGame());
+   
     }
 
     private IEnumerator StartGame()
@@ -55,13 +56,12 @@ public class GameStateController : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         GetReadyLabel.enabled = false;
-        _gameOver = false;
-        Ball.Kick();
+        onStart.Invoke();
+        Debug.Log("Startgame");
     }
     public void Victory()
     {
         SceneManager.LoadScene("Win");
-        _gameOver = true;
     }
 }
 

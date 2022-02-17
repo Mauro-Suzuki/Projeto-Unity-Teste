@@ -1,17 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events; // add eventos
+using UnityEngine.Events; 
 
 public class BrikController : MonoBehaviour
 {
-    public UnityEvent onBreak; //add variavel de evento
+    public UnityEvent onBreak; 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        /*
-        var game = GamePlay.Instance;
-        game.Score++; */
-        //removed the GamePlay.Instance and score was moved to ScoreController
         onBreak.Invoke(); //Invoke the onBreak event on collision
         Destroy(gameObject);
     }

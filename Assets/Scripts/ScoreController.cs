@@ -23,6 +23,8 @@ public class ScoreController : MonoBehaviour
         }
         if (onScore == null)
             onScore = new MyUIntEvent();
+
+        Score = 0;
     }
 
     

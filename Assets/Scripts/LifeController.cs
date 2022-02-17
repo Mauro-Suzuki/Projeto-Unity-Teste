@@ -17,15 +17,13 @@ public class LifeController : MonoBehaviour
     public int damageNumber;
 
     public LifeEvent onDamageTaken;
-
-    //reference to create listener from deeath script
-    public Death damageScript;
+    public GameStateController reset;
+    public Death damageScript; //reference to create listener from death script
     void Start()
     {
         CurrentLife = startingLife;
         damageScript.onDamage.AddListener(Damage);
     }
-
     public void resetLife()
     {
         CurrentLife = startingLife;

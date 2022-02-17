@@ -631,6 +631,10 @@ MonoBehaviour:
   CurrentLife: 3
   startingLife: 3
   damageNumber: 1
+  onDamageTaken:
+    m_PersistentCalls:
+      m_Calls: []
+  reset: {fileID: 0}
   damageScript: {fileID: 248808958}
 --- !u!1001 &1109724258
 PrefabInstance:
@@ -681,6 +685,16 @@ PrefabInstance:
       propertyPath: Speed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114905379346026504, guid: ba126b536cd254f439e8b83616958865,
+        type: 3}
+      propertyPath: reset
+      value: 
+      objectReference: {fileID: 2013758439}
+    - target: {fileID: 114905379346026504, guid: ba126b536cd254f439e8b83616958865,
+        type: 3}
+      propertyPath: resetPos
+      value: 
+      objectReference: {fileID: 248808958}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba126b536cd254f439e8b83616958865, type: 3}
 --- !u!1 &1212202855
@@ -846,14 +860,14 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 68
     m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 000
+  m_Text: 0
 --- !u!222 &1224135052
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1140,11 +1154,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7548814b3d4d4a348f08f0b13ac286e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onReset:
+    m_PersistentCalls:
+      m_Calls: []
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
   Ball: {fileID: 727422821}
   Player: {fileID: 1296840749}
-  GetReadyLabel: {fileID: 1929710741}
   currentScore: {fileID: 1224135053}
   currentLife: {fileID: 965706413}
+  GetReadyLabel: {fileID: 1929710741}
 --- !u!50 &2013758440
 Rigidbody2D:
   serializedVersion: 4
