@@ -1104,11 +1104,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ball: {fileID: 727422821}
   Player: {fileID: 1296840749}
-  ScoreLabel: {fileID: 1224135051}
+  Score: 0
   LivesLabel: {fileID: 965706411}
   GetReadyLabel: {fileID: 1929710741}
-  Score: 0
   Lives: 3
+  currentScore: {fileID: 2013758441}
 --- !u!50 &2013758440
 Rigidbody2D:
   serializedVersion: 4
@@ -1130,3 +1130,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2013758441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013758437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d506df4a26a963d4387c8dfe83f37dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoreLabel: {fileID: 1224135051}
+  onScore:
+    m_PersistentCalls:
+      m_Calls: []

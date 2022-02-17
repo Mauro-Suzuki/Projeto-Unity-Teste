@@ -7,7 +7,9 @@ public class Death : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        GamePlay.Instance.Lives--;
-        GamePlay.Instance.Goal();
+        GameStateController.Instance.Lives--;
+        GameStateController.Instance.Goal();
     }
+
+    //adicionar eventos para reduzir vida
 }

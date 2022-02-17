@@ -56,10 +56,11 @@
      <Compile Include="Assets\Scripts\BallController.cs" />
      <Compile Include="Assets\Scripts\BrikController.cs" />
      <Compile Include="Assets\Scripts\Death.cs" />
-     <Compile Include="Assets\Scripts\GamePlay.cs" />
+     <Compile Include="Assets\Scripts\GameStateController.cs" />
      <Compile Include="Assets\Scripts\GoBackToMain.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\ScoreController.cs" />
      <Compile Include="Assets\Scripts\TopScore.cs" />
  <Reference Include="Unity.PackageManagerUI.Editor">
  <HintPath>C:/Users/mauro/OneDrive/Área de Trabalho/Teste Unity/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>

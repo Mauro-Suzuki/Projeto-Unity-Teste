@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
-    }//comando getcomponent movido do update para o start
+    }//getcomponent was moved from Update to Start
     void Update()
     {
         if (Input.GetKey(KeyCode.LeftArrow))

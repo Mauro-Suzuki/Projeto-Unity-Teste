@@ -11,7 +11,7 @@ public class BrikController : MonoBehaviour
         /*
         var game = GamePlay.Instance;
         game.Score++; */
-        //removed the GamePlay.Instance
+        //removed the GamePlay.Instance and score was moved to ScoreController
         onBreak.Invoke(); //Invoke the onBreak event on collision
         Destroy(gameObject);
     }
