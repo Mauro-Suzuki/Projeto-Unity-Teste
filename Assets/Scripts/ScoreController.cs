@@ -5,15 +5,17 @@ using UnityEngine.UI;
 using UnityEngine.Events;
     
 [System.Serializable]
-public class MyUIntEvent : UnityEvent<uint>
+public class MyUIntEvent : UnityEvent<int>
 {
 
 }
 public class ScoreController : MonoBehaviour 
 {
     public Text ScoreLabel;
-    public static uint Score = 0;
+    public static int Score = 0;
     public MyUIntEvent onScore;
+
+    public int HighScore;
     public void Start()
     {
         var briks = FindObjectsOfType<BrikController>(); //find all the objects with the brikController script
@@ -25,6 +27,8 @@ public class ScoreController : MonoBehaviour
             onScore = new MyUIntEvent();
 
         Score = 0;
+
+        PlayerPrefs.SetString("HighScore", 0.ToString()); //resets score to 0 everytime the scene starts
     }
 
     
@@ -33,7 +37,19 @@ public class ScoreController : MonoBehaviour
         Score++;
         ScoreLabel.text = Score.ToString();
         onScore.Invoke(Score);
+
+        updateHighScore();
     }
 
-
+    public void updateHighScore()
+    {
+        if (Score > HighScore)
+        {
+            HighScore = Score;
+            if (HighScore > PlayerPrefs.GetInt("HighScore"))
+            {
+                PlayerPrefs.SetString("HighScore", Score.ToString());
+            }
+        }
+    }
 }

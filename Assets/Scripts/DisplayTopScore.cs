@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TopScore : MonoBehaviour
+public class DisplayTopScore : MonoBehaviour
 {
     public Text Label;
     
@@ -11,6 +11,7 @@ public class TopScore : MonoBehaviour
     {
         //var n = GamePlay.Instance.Score; fix this
         //Label.text += n.ToString();
+       Label.text = PlayerPrefs.GetString("HighScore");
     }
 
 

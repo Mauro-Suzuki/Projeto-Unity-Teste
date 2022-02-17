@@ -21,10 +21,10 @@ public class GameStateController : MonoBehaviour
     private void Awake()
     {
         Start();
-        currentScore.onScore.AddListener(CheckVictory);
+        currentScore.onScore.AddListener(CheckScore);
         currentLife.onDamageTaken.AddListener(CheckLife);
     }
-    public void CheckVictory(uint score)
+    public void CheckScore(int score)
     {
         if(score == BriksGoal)
         {
