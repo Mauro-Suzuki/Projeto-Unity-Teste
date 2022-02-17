@@ -5,9 +5,10 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     public float Speed = 1f;
+
     private Rigidbody2D rb;
     public GameStateController reset;
-    public Death resetPos;
+    public DeathController resetPos;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); //moved from update

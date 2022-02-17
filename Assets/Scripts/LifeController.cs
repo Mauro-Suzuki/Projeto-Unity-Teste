@@ -5,20 +5,18 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 
 [System.Serializable]
-public class LifeEvent : UnityEvent<int>
-{
-
-}
+public class LifeEvent : UnityEvent<int>{}
 public class LifeController : MonoBehaviour
 {
     public Text LivesLabel;
+
     public int CurrentLife;
     public int startingLife;
     public int damageNumber;
 
     public LifeEvent onDamageTaken;
     public GameStateController reset;
-    public Death damageScript; //reference to create listener from death script
+    public DeathController damageScript; //reference to create listener from death script
     void Start()
     {
         CurrentLife = startingLife;

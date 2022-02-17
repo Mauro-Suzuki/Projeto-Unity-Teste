@@ -9,10 +9,16 @@ public class DisplayTopScore : MonoBehaviour
     
     private void Awake()
     {
-        //var n = GamePlay.Instance.Score; fix this
-        //Label.text += n.ToString();
+
        Label.text = "Top Score: " + PlayerPrefs.GetString("HighScore");
     }
 
 
 }
+
+
+/*
+ unused code
+        //var n = GamePlay.Instance.Score; fix this
+        //Label.text += n.ToString();
+*/

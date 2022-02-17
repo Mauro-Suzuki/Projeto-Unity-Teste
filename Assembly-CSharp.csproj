@@ -55,7 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BallController.cs" />
      <Compile Include="Assets\Scripts\BrikController.cs" />
-     <Compile Include="Assets\Scripts\Death.cs" />
+     <Compile Include="Assets\Scripts\DeathController.cs" />
      <Compile Include="Assets\Scripts\DisplayTopScore.cs" />
      <Compile Include="Assets\Scripts\GameStateController.cs" />
      <Compile Include="Assets\Scripts\GoBackToMain.cs" />

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 
-public class Death : MonoBehaviour
+public class DeathController : MonoBehaviour
 {
     public UnityEvent onDamage;
     private void OnTriggerEnter2D(Collider2D other)
