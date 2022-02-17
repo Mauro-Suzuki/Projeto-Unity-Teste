@@ -11,7 +11,7 @@ public class DisplayTopScore : MonoBehaviour
     {
         //var n = GamePlay.Instance.Score; fix this
         //Label.text += n.ToString();
-       Label.text = PlayerPrefs.GetString("HighScore");
+       Label.text = "Top Score: " + PlayerPrefs.GetString("HighScore");
     }
 
 

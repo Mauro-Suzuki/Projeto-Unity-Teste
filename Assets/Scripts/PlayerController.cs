@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _velocity;
     private Rigidbody2D rbody;
-    public Vector3 orgPos;
+    private Vector3 orgPos;
     public Death death;
     void Start()
     {
