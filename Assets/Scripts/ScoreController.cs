@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
     
@@ -11,7 +9,7 @@ public class ScoreController : MonoBehaviour
     public Text ScoreLabel;
 
     public static int Score = 0;
-    public int HighScore;
+    public int highScore;
 
     public ScoreEvent onScore;
 
@@ -28,7 +26,7 @@ public class ScoreController : MonoBehaviour
 
         Score = 0;
 
-        PlayerPrefs.SetString("HighScore", 0.ToString()); //resets score to 0 everytime the scene starts
+        PlayerPrefs.SetString("HighScore", 0.ToString()); //resets highscore to 0 everytime the scene starts
     }
 
     
@@ -38,15 +36,15 @@ public class ScoreController : MonoBehaviour
         ScoreLabel.text = Score.ToString();
         onScore.Invoke(Score);
 
-        updateHighScore();
+        UpdateHighScore();
     }
 
-    public void updateHighScore()
+    public void UpdateHighScore()
     {
-        if (Score > HighScore)
+        if (Score > highScore)
         {
-            HighScore = Score;
-            if (HighScore > PlayerPrefs.GetInt("HighScore"))
+            highScore = Score;
+            if (highScore > PlayerPrefs.GetInt("HighScore"))
             {
                 PlayerPrefs.SetString("HighScore", Score.ToString());
             }

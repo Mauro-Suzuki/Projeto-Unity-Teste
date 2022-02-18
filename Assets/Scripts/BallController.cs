@@ -1,35 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
     public float Speed = 1f;
 
-    private Rigidbody2D rb;
-    public GameStateController reset;
-    public DeathController resetPos;
+    private Rigidbody2D rigidbody2D;
+    public GameStateController resetState;
+    public DeathController playerDeath;
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>(); //moved from update
-        resetPos.onDamage.AddListener(resetPosition);
-        reset.onStart.AddListener(Kick);
+        rigidbody2D = GetComponent<Rigidbody2D>(); //moved from update
+        playerDeath.onDamage.AddListener(resetBallPosition);
+        resetState.onStart.AddListener(KickBallToRandomDirection);
     }
     private void Update()
     {
-        rb.velocity = rb.velocity.normalized * Speed;
+        rigidbody2D.velocity = rigidbody2D.velocity.normalized * Speed;  //Player movement
     }
 
-    public void Kick()
+    public void KickBallToRandomDirection()
     {
-        rb.velocity = Random.insideUnitCircle * Speed;
-        Debug.Log("kick");
+        rigidbody2D.velocity = Random.insideUnitCircle * Speed;
     }
 
-    public void resetPosition()
+    public void resetBallPosition()
     {
         transform.position = Vector3.zero;    //reset the ball position to zero
-        rb.velocity = Vector2.zero; //reset the ball velocity to zero
-        Debug.Log("reset");
+        rigidbody2D.velocity = Vector2.zero; //reset the ball velocity to zero
     }
 }

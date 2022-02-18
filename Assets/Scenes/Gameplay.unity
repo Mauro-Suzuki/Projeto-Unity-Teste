@@ -525,18 +525,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 597105870}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &727422821 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114905379346026504, guid: ba126b536cd254f439e8b83616958865,
-    type: 3}
-  m_PrefabInstance: {fileID: 1109724258}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c267e81263efe499bb0e46e62e1890d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &965706409
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,13 +616,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LivesLabel: {fileID: 965706411}
-  CurrentLife: 3
+  currentLife: 0
   startingLife: 3
   damageNumber: 1
   onDamageTaken:
     m_PersistentCalls:
       m_Calls: []
-  reset: {fileID: 0}
+  resetGame: {fileID: 0}
   damageScript: {fileID: 248808958}
 --- !u!1001 &1109724258
 PrefabInstance:
@@ -693,6 +681,26 @@ PrefabInstance:
     - target: {fileID: 114905379346026504, guid: ba126b536cd254f439e8b83616958865,
         type: 3}
       propertyPath: resetPos
+      value: 
+      objectReference: {fileID: 248808958}
+    - target: {fileID: 114905379346026504, guid: ba126b536cd254f439e8b83616958865,
+        type: 3}
+      propertyPath: resetGame
+      value: 
+      objectReference: {fileID: 2013758439}
+    - target: {fileID: 114905379346026504, guid: ba126b536cd254f439e8b83616958865,
+        type: 3}
+      propertyPath: resetPosition
+      value: 
+      objectReference: {fileID: 248808958}
+    - target: {fileID: 114905379346026504, guid: ba126b536cd254f439e8b83616958865,
+        type: 3}
+      propertyPath: resetState
+      value: 
+      objectReference: {fileID: 2013758439}
+    - target: {fileID: 114905379346026504, guid: ba126b536cd254f439e8b83616958865,
+        type: 3}
+      propertyPath: playerDeath
       value: 
       objectReference: {fileID: 248808958}
     m_RemovedComponents: []
@@ -889,10 +897,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreLabel: {fileID: 1224135051}
+  highScore: 0
   onScore:
     m_PersistentCalls:
       m_Calls: []
-  HighScore: 0
 --- !u!1001 &1236213347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -944,18 +952,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1236213347}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1296840749 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114154914642418746, guid: 93282317b771f4f9ca62e0b8ee4fc80e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1314003092}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c13dbc3341ec41979443ad610f35d74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1314003092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1000,6 +996,16 @@ PrefabInstance:
       propertyPath: death
       value: 
       objectReference: {fileID: 248808958}
+    - target: {fileID: 114154914642418746, guid: 93282317b771f4f9ca62e0b8ee4fc80e,
+        type: 3}
+      propertyPath: PlayerSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114154914642418746, guid: 93282317b771f4f9ca62e0b8ee4fc80e,
+        type: 3}
+      propertyPath: playerSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93282317b771f4f9ca62e0b8ee4fc80e, type: 3}
 --- !u!1001 &1555485336
@@ -1166,8 +1172,6 @@ MonoBehaviour:
   onStart:
     m_PersistentCalls:
       m_Calls: []
-  Ball: {fileID: 727422821}
-  Player: {fileID: 1296840749}
   currentScore: {fileID: 1224135053}
   currentLife: {fileID: 965706413}
   GetReadyLabel: {fileID: 1929710741}

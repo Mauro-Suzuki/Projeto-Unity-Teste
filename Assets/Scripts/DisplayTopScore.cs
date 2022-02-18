@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class DisplayTopScore : MonoBehaviour
@@ -9,16 +7,6 @@ public class DisplayTopScore : MonoBehaviour
     
     private void Awake()
     {
-
        Label.text = "Top Score: " + PlayerPrefs.GetString("HighScore");
     }
-
-
 }
-
-
-/*
- unused code
-        //var n = GamePlay.Instance.Score; fix this
-        //Label.text += n.ToString();
-*/

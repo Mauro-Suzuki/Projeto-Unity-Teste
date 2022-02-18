@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
@@ -10,26 +8,26 @@ public class LifeController : MonoBehaviour
 {
     public Text LivesLabel;
 
-    public int CurrentLife;
+    public int currentLife;
     public int startingLife;
     public int damageNumber;
 
     public LifeEvent onDamageTaken;
-    public GameStateController reset;
+    public GameStateController resetGame;
     public DeathController damageScript; //reference to create listener from death script
     void Start()
     {
-        CurrentLife = startingLife;
+        currentLife = startingLife;
         damageScript.onDamage.AddListener(Damage);
     }
     public void resetLife()
     {
-        CurrentLife = startingLife;
+        currentLife = startingLife;
     }
     public void Damage()
     {
-        CurrentLife -= damageNumber; //created a variable instead of hardcoding the damage
-        LivesLabel.text = CurrentLife.ToString();
-        onDamageTaken.Invoke(CurrentLife); //invoking current life so other scripts can subscribe to this variable
+        currentLife -= damageNumber; //created a variable instead of hardcoding the damage
+        LivesLabel.text = currentLife.ToString();
+        onDamageTaken.Invoke(currentLife); //invoking current life so other scripts can subscribe to this variable
     }
 }
