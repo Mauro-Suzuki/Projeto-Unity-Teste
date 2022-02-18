@@ -11,7 +11,7 @@ public class GameState : MonoBehaviour
 
     public Score currentScore;
     public Life currentLife;
-
+    public Ball ball;
     public Text GetReadyLabel;
 
     uint BriksGoal = 4;
@@ -28,9 +28,8 @@ public class GameState : MonoBehaviour
     private IEnumerator StartGame()
     {
         yield return new WaitForSeconds(3f);
-
         GetReadyLabel.enabled = false;
-        onStart.Invoke();
+        ball.KickBallToRandomDirection();
     }
     public void CheckVictory(int score)  //receives int from event to check if the player won
     {
@@ -41,6 +40,7 @@ public class GameState : MonoBehaviour
     }
     public void CheckGameOver(int life) //receives int and check if the player lost all lives and load lose scene if lost
     {
+        ball.resetBallPosition();
         if(life <= 0)
         {
             SceneManager.LoadScene("Lose");
