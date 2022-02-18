@@ -26,7 +26,7 @@ public class ScoreController : MonoBehaviour
 
         Score = 0;
 
-        PlayerPrefs.SetString("HighScore", 0.ToString()); //resets highscore to 0 everytime the scene starts
+        PlayerPrefs.SetString("HighScore", 0.ToString()); //resets highscore to 0 everytime the scene starts, can be removed if needed
     }
 
     
@@ -34,8 +34,8 @@ public class ScoreController : MonoBehaviour
     {
         Score++;
         ScoreLabel.text = Score.ToString();
-        onScore.Invoke(Score);
 
+        onScore.Invoke(Score);
         UpdateHighScore();
     }
 

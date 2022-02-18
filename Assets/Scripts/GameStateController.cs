@@ -21,8 +21,8 @@ public class GameStateController : MonoBehaviour
         GetReadyLabel.enabled = true;
         StartCoroutine(StartGame());
 
-        currentScore.onScore.AddListener(CheckVictory);
-        currentLife.onDamageTaken.AddListener(CheckGameOver);
+        currentScore.onScore.AddListener(CheckVictory); //subscribed to onScore event
+        currentLife.onDamageTaken.AddListener(CheckGameOver); //subscribed to onDamageTaken event
     }
 
     private IEnumerator StartGame()
@@ -32,14 +32,14 @@ public class GameStateController : MonoBehaviour
         GetReadyLabel.enabled = false;
         onStart.Invoke();
     }
-    public void CheckVictory(int score)
+    public void CheckVictory(int score)  //receives int from event to check if the player won
     {
         if(score == BriksGoal)
         {
             Victory();
         }
     }
-    public void CheckGameOver(int life) //check if the player lost all lives and starts lose scene if lost
+    public void CheckGameOver(int life) //receives int and check if the player lost all lives and load lose scene if lost
     {
         if(life <= 0)
         {
