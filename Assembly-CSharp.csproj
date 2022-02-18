@@ -58,9 +58,8 @@
      <Compile Include="Assets\Scripts\DeathController.cs" />
      <Compile Include="Assets\Scripts\DisplayTopScore.cs" />
      <Compile Include="Assets\Scripts\GameStateController.cs" />
-     <Compile Include="Assets\Scripts\GoBackToMain.cs" />
+     <Compile Include="Assets\Scripts\GoBackToMainMenu.cs" />
      <Compile Include="Assets\Scripts\LifeController.cs" />
-     <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\ScoreController.cs" />
  <Reference Include="Unity.PackageManagerUI.Editor">

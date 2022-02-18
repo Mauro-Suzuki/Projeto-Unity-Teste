@@ -13,7 +13,6 @@ public class LifeController : MonoBehaviour
     public int damageNumber;
 
     public LifeEvent onDamageTaken;
-    public GameStateController resetGame;
     public DeathController damageScript; //reference to create listener from death script
     void Start()
     {
