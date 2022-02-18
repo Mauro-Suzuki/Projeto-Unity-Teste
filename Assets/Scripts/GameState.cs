@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-public class GameStateController : MonoBehaviour
+public class GameState : MonoBehaviour
 {
     public UnityEvent onReset;
     public UnityEvent onStart;

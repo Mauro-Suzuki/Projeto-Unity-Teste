@@ -622,7 +622,6 @@ MonoBehaviour:
   onDamageTaken:
     m_PersistentCalls:
       m_Calls: []
-  resetGame: {fileID: 0}
   damageScript: {fileID: 248808958}
 --- !u!1001 &1109724258
 PrefabInstance:
@@ -703,6 +702,11 @@ PrefabInstance:
       propertyPath: playerDeath
       value: 
       objectReference: {fileID: 248808958}
+    - target: {fileID: 114905379346026504, guid: ba126b536cd254f439e8b83616958865,
+        type: 3}
+      propertyPath: startGame
+      value: 
+      objectReference: {fileID: 2013758439}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba126b536cd254f439e8b83616958865, type: 3}
 --- !u!1 &1212202855
