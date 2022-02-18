@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 
-public class BallController : MonoBehaviour
+public class Ball : MonoBehaviour
 {
     public float Speed = 1f;
 
     private Rigidbody2D rigidbody2D;
     public GameStateController resetState;
-    public DeathController playerDeath;
+    public Death playerDeath;
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>(); //moved from update

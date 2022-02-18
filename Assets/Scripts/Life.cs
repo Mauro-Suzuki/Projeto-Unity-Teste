@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 [System.Serializable]
 public class LifeEvent : UnityEvent<int>{}
-public class LifeController : MonoBehaviour
+public class Life : MonoBehaviour
 {
     public Text LivesLabel;
 
@@ -13,7 +13,7 @@ public class LifeController : MonoBehaviour
     public int damageNumber;
 
     public LifeEvent onDamageTaken;
-    public DeathController damageScript; //reference to create listener from death script
+    public Death damageScript; //reference to create listener from death script
     void Start()
     {
         currentLife = startingLife;

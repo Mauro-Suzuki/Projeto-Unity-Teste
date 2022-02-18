@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events; 
 
-public class BrikController : MonoBehaviour
+public class Brik : MonoBehaviour
 {
     public UnityEvent onBreak; 
     private void OnCollisionEnter2D(Collision2D other)

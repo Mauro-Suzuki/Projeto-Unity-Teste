@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rigidbody2D;
     private Vector3 originalPosition;
 
-    public DeathController death;
+    public Death death;
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();

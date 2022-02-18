@@ -9,8 +9,8 @@ public class GameStateController : MonoBehaviour
     public UnityEvent onReset;
     public UnityEvent onStart;
 
-    public ScoreController currentScore;
-    public LifeController currentLife;
+    public Score currentScore;
+    public Life currentLife;
 
     public Text GetReadyLabel;
 
