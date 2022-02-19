@@ -623,6 +623,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   damageScript: {fileID: 248808958}
+--- !u!114 &983438981 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114905379346026504, guid: ba126b536cd254f439e8b83616958865,
+    type: 3}
+  m_PrefabInstance: {fileID: 1109724258}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c267e81263efe499bb0e46e62e1890d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1109724258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1178,6 +1190,7 @@ MonoBehaviour:
       m_Calls: []
   currentScore: {fileID: 1224135053}
   currentLife: {fileID: 965706413}
+  ball: {fileID: 983438981}
   GetReadyLabel: {fileID: 1929710741}
 --- !u!50 &2013758440
 Rigidbody2D:

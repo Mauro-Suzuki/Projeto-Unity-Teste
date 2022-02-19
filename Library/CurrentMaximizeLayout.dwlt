@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 498}
   m_MaxSize: {x: 18004, y: 14048}
   vertical: 0
-  controlID: 3903
+  controlID: 5655
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_MinSize: {x: 432, y: 498}
   m_MaxSize: {x: 14002, y: 14048}
   vertical: 1
-  controlID: 3904
+  controlID: 5634
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 3905
+  controlID: 5573
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -212,7 +212,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 5ec7ffffe6c7ffffb4cbffff10cefffff8d0ffff58d2ffff8ed4ffff44d6ffffd4d7ffffbad8ffff02dbfffface2ffffaae8ffff1cf0ffff06f1ffff58f4ffffdaf6ffffacf7ffffdaf8ffffd4fbffff68090000e62900002a2c0000942c0000e63200000c340000c4350000
+      m_ExpandedIDs: 5ec7ffffe6c7ffffb4cbffff10cefffff8d0ffff58d2ffff8ed4ffff44d6ffffd4d7ffffbad8ffff02dbfffface2ffffaae8ffff1cf0ffff06f1ffff58f4ffffdaf6ffffacf7ffffdaf8ffffd4fbffff68090000e62900002a2c0000942c0000e63200000c340000c435000064360000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -255,8 +255,8 @@ MonoBehaviour:
     y: 0
     width: 1022
     height: 457
-  m_MinSize: {x: 204, y: 224}
-  m_MaxSize: {x: 4004, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 8}
   m_Panes:
   - {fileID: 8}
@@ -392,7 +392,7 @@ MonoBehaviour:
   m_MinSize: {x: 432, y: 274}
   m_MaxSize: {x: 14002, y: 10024}
   vertical: 0
-  controlID: 3883
+  controlID: 5635
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -457,20 +457,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "C:\\Users\\mauro\\OneDrive\\\xC1rea de Trabalho\\Teste Unity"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 84080000
-    m_LastClickedID: 2180
-    m_ExpandedIDs: 000000000408000000ca9a3b
+    m_SelectedIDs: 68080000
+    m_LastClickedID: 2152
+    m_ExpandedIDs: ffffffff00000000040800006808000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -523,8 +523,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 88360000
-    m_LastClickedInstanceID: 13960
+    m_SelectedInstanceIDs: 6e360000
+    m_LastClickedInstanceID: 13934
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300008e05000000000000
     m_RenameOverlay:

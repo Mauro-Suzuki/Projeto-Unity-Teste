@@ -5,7 +5,6 @@ public class PlayerController : MonoBehaviour
     public float playerSpeed;
     private Rigidbody2D rigidbody2D;
     private Vector3 originalPosition;
-
     public Death death;
     void Start()
     {

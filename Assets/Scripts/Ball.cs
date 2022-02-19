@@ -3,7 +3,6 @@
 public class Ball : MonoBehaviour
 {
     public float Speed = 1f;
-
     private Rigidbody2D rigidbody2D;
     void Start()
     {
